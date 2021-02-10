@@ -13,7 +13,7 @@ def hello():
 def zip_request():
   if request.method == 'POST':
     memory_file = io.BytesIO()
-    # In--memory zip file handling
+    # In-memory zip file handling
     with ZipFile(memory_file,'w', compression = ZIP_DEFLATED) as zf: # Compression type
       json_str = request.form['json']
       uploaded_pdf_file = request.files['pdf_file']
